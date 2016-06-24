@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/rl_pictures_info">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请在搜索框中输入网站网址"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_pictures_info"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pb_pictures_loading"
+            android:layout_below="@id/tv_pictures_info"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_pictures_download"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_s_download_press"
+            android:layout_marginRight="5dp"
+            android:onClick="download"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/cb_pictures_selected"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:visibility="gone"
+            style="@style/CustomCheckboxTheme"/>
+    </RelativeLayout>
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_pictures_info"
+        android:numColumns="3"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:id="@+id/gv_pictures_pics">
+
+    </GridView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止抓取"
+        android:id="@+id/btn_pictures_stop"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_pictures_info"
+        android:layout_marginRight="5dp"
+        android:onClick="stopSearch"
+        />
+
+</RelativeLayout>

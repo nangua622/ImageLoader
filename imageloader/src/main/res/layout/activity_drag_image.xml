@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_drag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_drag_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="middle"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="图片路径"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_drag_pageno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="0/1"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/iv_drag_download"
+        android:onClick="downloadImage"
+        android:src="@drawable/icon_s_download_press" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="50dp"
+        android:onClick="shareImage"
+        android:id="@+id/iv_drag_share"
+        android:src="@drawable/toolbar_pop_send_press" />
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="请点击下面网站，开始精彩之旅"
+        android:textSize="18sp"/>
+
+    <GridView
+        android:id="@+id/gv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:verticalSpacing="3dp"
+        android:layout_below="@id/tv_main_title"/>
+</RelativeLayout>
